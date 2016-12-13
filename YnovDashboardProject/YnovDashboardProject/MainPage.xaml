@@ -5,8 +5,7 @@
     xmlns:local="using:YnovDashboardProject"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    xmlns:charts="using:CrossPieCharts.UWP.PieCharts">
+    mc:Ignorable="d">
 
         <Hub Background="AliceBlue">
             <HubSection Width="600" Header="TEST" Background="Azure">
