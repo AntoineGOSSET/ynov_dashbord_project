@@ -5,9 +5,31 @@
     xmlns:local="using:YnovDashboardProject"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    xmlns:charts="using:CrossPieCharts.UWP.PieCharts">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Hub Background="AliceBlue">
+            <HubSection Width="600" Header="TEST" Background="Azure">
+                <DataTemplate>
+                    <Grid>
+                        <TextBlock Text="Hello world" Style="{StaticResource BodyTextBlockStyle}"/>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+            <HubSection Width="600">
+                <DataTemplate>
+                    <Grid>
+                        <TextBlock Text="Hello world" Style="{StaticResource BodyTextBlockStyle}"/>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+            <HubSection Width="600">
+                <DataTemplate>
+                    <Grid>
+                        <TextBlock Text="Hello world" Style="{StaticResource BodyTextBlockStyle}"/>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+        </Hub>
 
-    </Grid>
 </Page>
