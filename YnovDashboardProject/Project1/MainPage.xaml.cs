@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project1.YnovServiceReference;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -15,7 +16,7 @@ using Windows.UI.Xaml.Navigation;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
-namespace YnovDashboardProject
+namespace Project1
 {
     /// <summary>
     /// Une page vide peut être utilisée seule ou constituer une page de destination au sein d'un frame.
@@ -25,6 +26,8 @@ namespace YnovDashboardProject
         public MainPage()
         {
             this.InitializeComponent();
+            YnovServiceClient c = new YnovServiceClient();
+            c.GetCustomersAsync();
         }
     }
 }
