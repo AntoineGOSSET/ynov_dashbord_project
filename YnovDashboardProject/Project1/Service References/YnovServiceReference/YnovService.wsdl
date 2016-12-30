@@ -13,16 +13,149 @@
   <wsdl:message name="IYnovService_GetCustomers_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetCustomersResponse" />
   </wsdl:message>
+  <wsdl:message name="IYnovService_Ventes_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ventes" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_Ventes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VentesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_Clients_InputMessage">
+    <wsdl:part name="parameters" element="tns:Clients" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_Clients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_Resultats_InputMessage">
+    <wsdl:part name="parameters" element="tns:Resultats" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_Resultats_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResultatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_GetAllSuppliers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSuppliers" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_GetAllSuppliers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSuppliersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_GetAllProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProducts" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_GetAllProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_GetAllOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOrder" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_GetAllOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_GetAllOrderItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOrderItem" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_GetAllOrderItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOrderItemResponse" />
+  </wsdl:message>
   <wsdl:portType name="IYnovService">
     <wsdl:operation name="GetCustomers">
       <wsdl:input wsaw:Action="http://tempuri.org/IYnovService/GetCustomers" message="tns:IYnovService_GetCustomers_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IYnovService/GetCustomersResponse" message="tns:IYnovService_GetCustomers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ventes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IYnovService/Ventes" message="tns:IYnovService_Ventes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IYnovService/VentesResponse" message="tns:IYnovService_Ventes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Clients">
+      <wsdl:input wsaw:Action="http://tempuri.org/IYnovService/Clients" message="tns:IYnovService_Clients_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IYnovService/ClientsResponse" message="tns:IYnovService_Clients_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Resultats">
+      <wsdl:input wsaw:Action="http://tempuri.org/IYnovService/Resultats" message="tns:IYnovService_Resultats_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IYnovService/ResultatsResponse" message="tns:IYnovService_Resultats_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSuppliers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IYnovService/GetAllSuppliers" message="tns:IYnovService_GetAllSuppliers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IYnovService/GetAllSuppliersResponse" message="tns:IYnovService_GetAllSuppliers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IYnovService/GetAllProducts" message="tns:IYnovService_GetAllProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IYnovService/GetAllProductsResponse" message="tns:IYnovService_GetAllProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IYnovService/GetAllOrder" message="tns:IYnovService_GetAllOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IYnovService/GetAllOrderResponse" message="tns:IYnovService_GetAllOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrderItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IYnovService/GetAllOrderItem" message="tns:IYnovService_GetAllOrderItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IYnovService/GetAllOrderItemResponse" message="tns:IYnovService_GetAllOrderItem_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IYnovService" type="tns:IYnovService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetCustomers">
       <soap:operation soapAction="http://tempuri.org/IYnovService/GetCustomers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ventes">
+      <soap:operation soapAction="http://tempuri.org/IYnovService/Ventes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Clients">
+      <soap:operation soapAction="http://tempuri.org/IYnovService/Clients" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Resultats">
+      <soap:operation soapAction="http://tempuri.org/IYnovService/Resultats" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSuppliers">
+      <soap:operation soapAction="http://tempuri.org/IYnovService/GetAllSuppliers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProducts">
+      <soap:operation soapAction="http://tempuri.org/IYnovService/GetAllProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrder">
+      <soap:operation soapAction="http://tempuri.org/IYnovService/GetAllOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrderItem">
+      <soap:operation soapAction="http://tempuri.org/IYnovService/GetAllOrderItem" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -14,6 +14,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+using WinRTXamlToolkit.Controls.DataVisualization.Charting;
+
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace Project1
@@ -23,11 +25,83 @@ namespace Project1
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public class FinancialStuff
+        {
+            public string Name { get; set; }
+            public int Amount { get; set; }
+        }
+
         public MainPage()
         {
             this.InitializeComponent();
             YnovServiceClient c = new YnovServiceClient();
             c.GetCustomersAsync();
+        }
+        
+
+        private void PieChart_Loaded(object sender, RoutedEventArgs e)
+        {
+            Random rand = new Random();
+            List<FinancialStuff> financialStuffList = new List<FinancialStuff>();
+            financialStuffList.Add(new FinancialStuff() { Name = "Windows Phone", Amount = rand.Next(0, 200) });
+            financialStuffList.Add(new FinancialStuff() { Name = "Apple", Amount = rand.Next(0, 200) });
+            financialStuffList.Add(new FinancialStuff() { Name = "Sony", Amount = rand.Next(0, 200) });
+            financialStuffList.Add(new FinancialStuff() { Name = "Samsung", Amount = rand.Next(0, 200) });
+
+            var pie = (PieSeries)sender;
+            pie.ItemsSource = financialStuffList;
+        }
+
+        private void ColumnSeries_Loaded(object sender, RoutedEventArgs e)
+        {
+            Random rand = new Random();
+            List<FinancialStuff> financialStuffList = new List<FinancialStuff>();
+            financialStuffList.Add(new FinancialStuff() { Name = "Windows Phone", Amount = rand.Next(0, 200) });
+            financialStuffList.Add(new FinancialStuff() { Name = "Apple", Amount = rand.Next(0, 200) });
+            financialStuffList.Add(new FinancialStuff() { Name = "Sony", Amount = rand.Next(0, 200) });
+            financialStuffList.Add(new FinancialStuff() { Name = "Samsung", Amount = rand.Next(0, 200) });
+
+            var column = (ColumnSeries)sender;
+            column.ItemsSource = financialStuffList;
+        }
+
+        private void LineSeries_Loaded(object sender, RoutedEventArgs e)
+        {
+            Random rand = new Random();
+            List<FinancialStuff> financialStuffList = new List<FinancialStuff>();
+            financialStuffList.Add(new FinancialStuff() { Name = "Windows Phone", Amount = rand.Next(0, 200) });
+            financialStuffList.Add(new FinancialStuff() { Name = "Apple", Amount = rand.Next(0, 200) });
+            financialStuffList.Add(new FinancialStuff() { Name = "Sony", Amount = rand.Next(0, 200) });
+            financialStuffList.Add(new FinancialStuff() { Name = "Samsung", Amount = rand.Next(0, 200) });
+
+            var line = (LineSeries)sender;
+            line.ItemsSource = financialStuffList;
+        }
+
+        private void BarSeries_Loaded(object sender, RoutedEventArgs e)
+        {
+            Random rand = new Random();
+            List<FinancialStuff> financialStuffList = new List<FinancialStuff>();
+            financialStuffList.Add(new FinancialStuff() { Name = "Windows Phone", Amount = rand.Next(0, 200) });
+            financialStuffList.Add(new FinancialStuff() { Name = "Apple", Amount = rand.Next(0, 200) });
+            financialStuffList.Add(new FinancialStuff() { Name = "Sony", Amount = rand.Next(0, 200) });
+            financialStuffList.Add(new FinancialStuff() { Name = "Samsung", Amount = rand.Next(0, 200) });
+
+            var bar = (BarSeries)sender;
+            bar.ItemsSource = financialStuffList;
+        }
+
+        private void BubbleSeries_Loaded(object sender, RoutedEventArgs e)
+        {
+            Random rand = new Random();
+            List<FinancialStuff> financialStuffList = new List<FinancialStuff>();
+            financialStuffList.Add(new FinancialStuff() { Name = "Windows Phone", Amount = rand.Next(0, 200) });
+            financialStuffList.Add(new FinancialStuff() { Name = "Apple", Amount = rand.Next(0, 200) });
+            financialStuffList.Add(new FinancialStuff() { Name = "Sony", Amount = rand.Next(0, 200) });
+            financialStuffList.Add(new FinancialStuff() { Name = "Samsung", Amount = rand.Next(0, 200) });
+
+            var bubble = (BubbleSeries)sender;
+            bubble.ItemsSource = financialStuffList;
         }
     }
 }
