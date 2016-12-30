@@ -5,10 +5,43 @@
     xmlns:local="using:Project1"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    xmlns:Charting="using:WinRTXamlToolkit.Controls.DataVisualization.Charting">
 
-
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <GridView x:Name="MyGridView" ItemTemplate="{StaticResource Standard250x250ItemTemplate}" IsItemClickEnabled="False" CanDrag="False" Margin="10,0,-10,0"/>
-    </Grid>
+    <Hub Background="{StaticResource AppBarBackgroundThemeBrush}" x:Name="test" Header="DashBoard">
+        <HubSection Header="Données Clients" Background="Blue">
+            <DataTemplate>
+                <StackPanel>
+                    <Charting:Chart x:Name="NbCustomersByCountry" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,100,0,0" Width="400" Height="400" >
+                        <Charting:PieSeries Title="Clients par pays" Margin="0" IndependentValuePath="Name" DependentValuePath="Amount" IsSelectionEnabled="True" Loaded="NbCustomersByCountry_Loaded"/>
+                    </Charting:Chart>
+                    <Charting:Chart x:Name="NbCommandsByCustomers" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,100,0,0" Width="600" Height="400">
+                        <Charting:BarSeries Title="Nombres de commandes" Margin="0" IndependentValuePath="Name" DependentValuePath="Amount" IsSelectionEnabled="True" Loaded="NbCommandsByCustomers_Loaded"/>
+                    </Charting:Chart>
+                </StackPanel>
+            </DataTemplate>
+        </HubSection>
+        
+        <HubSection>
+            <DataTemplate>
+                <Grid>
+                    <Charting:Chart x:Name="PieChart" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,100,0,0" Width="399" Height="400">
+                        <Charting:PieSeries Title="Smartphone Companies" Margin="0" IndependentValuePath="Name" DependentValuePath="Amount" IsSelectionEnabled="True" />
+                    </Charting:Chart>
+                    <Charting:Chart x:Name="ColumnChart" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,100,0,0" Width="399" Height="400">
+                        <Charting:ColumnSeries Title="Smartphone Companies" Margin="0" IndependentValuePath="Name" DependentValuePath="Amount" IsSelectionEnabled="True" />
+                    </Charting:Chart>
+                    <Charting:Chart x:Name="LineChart" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,100,0,0" Width="600" Height="400">
+                        <Charting:LineSeries Title="Smartphone Companies" Margin="0" IndependentValuePath="Name" DependentValuePath="Amount" IsSelectionEnabled="True"/>
+                    </Charting:Chart>
+                    <Charting:Chart x:Name="BarChart" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,100,0,0" Width="600" Height="400">
+                        <Charting:BarSeries Title="Smartphone Companies" Margin="0" IndependentValuePath="Name" DependentValuePath="Amount" IsSelectionEnabled="True"/>
+                    </Charting:Chart>
+                    <Charting:Chart x:Name="BubbleChart" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,100,0,0" Width="600" Height="400">
+                        <Charting:BubbleSeries Title="Smartphone Companies" Margin="0" IndependentValuePath="Name" DependentValuePath="Amount" IsSelectionEnabled="True"/>
+                    </Charting:Chart>
+                </Grid>
+            </DataTemplate>
+        </HubSection>
+    </Hub>
 </Page>
