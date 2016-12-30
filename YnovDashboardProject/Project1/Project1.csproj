@@ -94,7 +94,16 @@
     <None Include="Service References\YnovServiceReference\Project1.YnovServiceReference.Client.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\YnovServiceReference\Project1.YnovServiceReference.CompteurPays.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\YnovServiceReference\Project1.YnovServiceReference.Customer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\YnovServiceReference\Project1.YnovServiceReference.Nb.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\YnovServiceReference\Project1.YnovServiceReference.NbSale.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\YnovServiceReference\Project1.YnovServiceReference.Order.datasource">
@@ -110,6 +119,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\YnovServiceReference\Project1.YnovServiceReference.Supplier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\YnovServiceReference\Project1.YnovServiceReference.TotalCommand.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\YnovServiceReference\Project1.YnovServiceReference.TotalSpend.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\YnovServiceReference\Project1.YnovServiceReference.Vente.datasource">

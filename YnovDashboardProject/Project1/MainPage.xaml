@@ -9,9 +9,9 @@
     xmlns:Charting="using:WinRTXamlToolkit.Controls.DataVisualization.Charting">
 
     <Hub Background="{StaticResource AppBarBackgroundThemeBrush}" x:Name="test">
-        <HubSection x:Name="test1">
-            <DataTemplate x:Name="test2">
-                <Grid x:Name="test3">
+        <HubSection>
+            <DataTemplate>
+                <Grid>
                     <Charting:Chart x:Name="PieChart" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,100,0,0" Width="400" Height="400" >
                         <Charting:PieSeries Margin="0" IndependentValuePath="Name" DependentValuePath="Amount" IsSelectionEnabled="True" Loaded="PieChart_Loaded"/>
                     </Charting:Chart>

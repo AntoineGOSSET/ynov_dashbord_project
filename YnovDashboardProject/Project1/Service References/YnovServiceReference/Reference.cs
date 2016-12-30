@@ -705,6 +705,246 @@ namespace Project1.YnovServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CompteurPays", Namespace="http://schemas.datacontract.org/2004/07/UWPExam")]
+    public partial class CompteurPays : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int NbrField;
+        
+        private string PaysField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Nbr {
+            get {
+                return this.NbrField;
+            }
+            set {
+                if ((this.NbrField.Equals(value) != true)) {
+                    this.NbrField = value;
+                    this.RaisePropertyChanged("Nbr");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Pays {
+            get {
+                return this.PaysField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PaysField, value) != true)) {
+                    this.PaysField = value;
+                    this.RaisePropertyChanged("Pays");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Nb", Namespace="http://schemas.datacontract.org/2004/07/UWPExam")]
+    public partial class Nb : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int CountField;
+        
+        private string FullNameField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Count {
+            get {
+                return this.CountField;
+            }
+            set {
+                if ((this.CountField.Equals(value) != true)) {
+                    this.CountField = value;
+                    this.RaisePropertyChanged("Count");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FullName {
+            get {
+                return this.FullNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FullNameField, value) != true)) {
+                    this.FullNameField = value;
+                    this.RaisePropertyChanged("FullName");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TotalSpend", Namespace="http://schemas.datacontract.org/2004/07/UWPExam")]
+    public partial class TotalSpend : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private float AmountField;
+        
+        private string FullNameField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float Amount {
+            get {
+                return this.AmountField;
+            }
+            set {
+                if ((this.AmountField.Equals(value) != true)) {
+                    this.AmountField = value;
+                    this.RaisePropertyChanged("Amount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FullName {
+            get {
+                return this.FullNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FullNameField, value) != true)) {
+                    this.FullNameField = value;
+                    this.RaisePropertyChanged("FullName");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TotalCommand", Namespace="http://schemas.datacontract.org/2004/07/UWPExam")]
+    public partial class TotalCommand : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int CountField;
+        
+        private int MonthField;
+        
+        private int YearField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Count {
+            get {
+                return this.CountField;
+            }
+            set {
+                if ((this.CountField.Equals(value) != true)) {
+                    this.CountField = value;
+                    this.RaisePropertyChanged("Count");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Month {
+            get {
+                return this.MonthField;
+            }
+            set {
+                if ((this.MonthField.Equals(value) != true)) {
+                    this.MonthField = value;
+                    this.RaisePropertyChanged("Month");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Year {
+            get {
+                return this.YearField;
+            }
+            set {
+                if ((this.YearField.Equals(value) != true)) {
+                    this.YearField = value;
+                    this.RaisePropertyChanged("Year");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="NbSale", Namespace="http://schemas.datacontract.org/2004/07/UWPExam")]
+    public partial class NbSale : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string FullNameField;
+        
+        private int SumField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FullName {
+            get {
+                return this.FullNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FullNameField, value) != true)) {
+                    this.FullNameField = value;
+                    this.RaisePropertyChanged("FullName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Sum {
+            get {
+                return this.SumField;
+            }
+            set {
+                if ((this.SumField.Equals(value) != true)) {
+                    this.SumField = value;
+                    this.RaisePropertyChanged("Sum");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="YnovServiceReference.IYnovService")]
     public interface IYnovService {
@@ -732,6 +972,30 @@ namespace Project1.YnovServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IYnovService/GetAllOrderItem", ReplyAction="http://tempuri.org/IYnovService/GetAllOrderItemResponse")]
         System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<Project1.YnovServiceReference.OrderItem>> GetAllOrderItemAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IYnovService/GetNbCustomersByCountry", ReplyAction="http://tempuri.org/IYnovService/GetNbCustomersByCountryResponse")]
+        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<Project1.YnovServiceReference.CompteurPays>> GetNbCustomersByCountryAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IYnovService/GetNbSupplierByCountry", ReplyAction="http://tempuri.org/IYnovService/GetNbSupplierByCountryResponse")]
+        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<Project1.YnovServiceReference.CompteurPays>> GetNbSupplierByCountryAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IYnovService/GetNbCommandsByCustomers", ReplyAction="http://tempuri.org/IYnovService/GetNbCommandsByCustomersResponse")]
+        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<Project1.YnovServiceReference.Nb>> GetNbCommandsByCustomersAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IYnovService/GetTotalSpendByCustomers", ReplyAction="http://tempuri.org/IYnovService/GetTotalSpendByCustomersResponse")]
+        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<Project1.YnovServiceReference.TotalSpend>> GetTotalSpendByCustomersAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IYnovService/GetTotalCommandByMonth", ReplyAction="http://tempuri.org/IYnovService/GetTotalCommandByMonthResponse")]
+        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<Project1.YnovServiceReference.TotalCommand>> GetTotalCommandByMonthAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IYnovService/GetTurnoverByMonth", ReplyAction="http://tempuri.org/IYnovService/GetTurnoverByMonthResponse")]
+        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<Project1.YnovServiceReference.Resultat>> GetTurnoverByMonthAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IYnovService/GetNbProductBySupplier", ReplyAction="http://tempuri.org/IYnovService/GetNbProductBySupplierResponse")]
+        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<Project1.YnovServiceReference.Nb>> GetNbProductBySupplierAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IYnovService/GetNbSaleByProduct", ReplyAction="http://tempuri.org/IYnovService/GetNbSaleByProductResponse")]
+        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<Project1.YnovServiceReference.NbSale>> GetNbSaleByProductAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -807,6 +1071,38 @@ namespace Project1.YnovServiceReference {
         
         public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<Project1.YnovServiceReference.OrderItem>> GetAllOrderItemAsync() {
             return base.Channel.GetAllOrderItemAsync();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<Project1.YnovServiceReference.CompteurPays>> GetNbCustomersByCountryAsync() {
+            return base.Channel.GetNbCustomersByCountryAsync();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<Project1.YnovServiceReference.CompteurPays>> GetNbSupplierByCountryAsync() {
+            return base.Channel.GetNbSupplierByCountryAsync();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<Project1.YnovServiceReference.Nb>> GetNbCommandsByCustomersAsync() {
+            return base.Channel.GetNbCommandsByCustomersAsync();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<Project1.YnovServiceReference.TotalSpend>> GetTotalSpendByCustomersAsync() {
+            return base.Channel.GetTotalSpendByCustomersAsync();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<Project1.YnovServiceReference.TotalCommand>> GetTotalCommandByMonthAsync() {
+            return base.Channel.GetTotalCommandByMonthAsync();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<Project1.YnovServiceReference.Resultat>> GetTurnoverByMonthAsync() {
+            return base.Channel.GetTurnoverByMonthAsync();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<Project1.YnovServiceReference.Nb>> GetNbProductBySupplierAsync() {
+            return base.Channel.GetNbProductBySupplierAsync();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<Project1.YnovServiceReference.NbSale>> GetNbSaleByProductAsync() {
+            return base.Channel.GetNbSaleByProductAsync();
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync() {

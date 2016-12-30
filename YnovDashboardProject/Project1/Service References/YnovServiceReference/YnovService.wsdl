@@ -55,6 +55,54 @@
   <wsdl:message name="IYnovService_GetAllOrderItem_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllOrderItemResponse" />
   </wsdl:message>
+  <wsdl:message name="IYnovService_GetNbCustomersByCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNbCustomersByCountry" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_GetNbCustomersByCountry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNbCustomersByCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_GetNbSupplierByCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNbSupplierByCountry" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_GetNbSupplierByCountry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNbSupplierByCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_GetNbCommandsByCustomers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNbCommandsByCustomers" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_GetNbCommandsByCustomers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNbCommandsByCustomersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_GetTotalSpendByCustomers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalSpendByCustomers" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_GetTotalSpendByCustomers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalSpendByCustomersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_GetTotalCommandByMonth_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalCommandByMonth" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_GetTotalCommandByMonth_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalCommandByMonthResponse" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_GetTurnoverByMonth_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTurnoverByMonth" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_GetTurnoverByMonth_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTurnoverByMonthResponse" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_GetNbProductBySupplier_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNbProductBySupplier" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_GetNbProductBySupplier_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNbProductBySupplierResponse" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_GetNbSaleByProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNbSaleByProduct" />
+  </wsdl:message>
+  <wsdl:message name="IYnovService_GetNbSaleByProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNbSaleByProductResponse" />
+  </wsdl:message>
   <wsdl:portType name="IYnovService">
     <wsdl:operation name="GetCustomers">
       <wsdl:input wsaw:Action="http://tempuri.org/IYnovService/GetCustomers" message="tns:IYnovService_GetCustomers_InputMessage" />
@@ -87,6 +135,38 @@
     <wsdl:operation name="GetAllOrderItem">
       <wsdl:input wsaw:Action="http://tempuri.org/IYnovService/GetAllOrderItem" message="tns:IYnovService_GetAllOrderItem_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IYnovService/GetAllOrderItemResponse" message="tns:IYnovService_GetAllOrderItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNbCustomersByCountry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IYnovService/GetNbCustomersByCountry" message="tns:IYnovService_GetNbCustomersByCountry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IYnovService/GetNbCustomersByCountryResponse" message="tns:IYnovService_GetNbCustomersByCountry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNbSupplierByCountry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IYnovService/GetNbSupplierByCountry" message="tns:IYnovService_GetNbSupplierByCountry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IYnovService/GetNbSupplierByCountryResponse" message="tns:IYnovService_GetNbSupplierByCountry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNbCommandsByCustomers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IYnovService/GetNbCommandsByCustomers" message="tns:IYnovService_GetNbCommandsByCustomers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IYnovService/GetNbCommandsByCustomersResponse" message="tns:IYnovService_GetNbCommandsByCustomers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalSpendByCustomers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IYnovService/GetTotalSpendByCustomers" message="tns:IYnovService_GetTotalSpendByCustomers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IYnovService/GetTotalSpendByCustomersResponse" message="tns:IYnovService_GetTotalSpendByCustomers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalCommandByMonth">
+      <wsdl:input wsaw:Action="http://tempuri.org/IYnovService/GetTotalCommandByMonth" message="tns:IYnovService_GetTotalCommandByMonth_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IYnovService/GetTotalCommandByMonthResponse" message="tns:IYnovService_GetTotalCommandByMonth_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTurnoverByMonth">
+      <wsdl:input wsaw:Action="http://tempuri.org/IYnovService/GetTurnoverByMonth" message="tns:IYnovService_GetTurnoverByMonth_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IYnovService/GetTurnoverByMonthResponse" message="tns:IYnovService_GetTurnoverByMonth_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNbProductBySupplier">
+      <wsdl:input wsaw:Action="http://tempuri.org/IYnovService/GetNbProductBySupplier" message="tns:IYnovService_GetNbProductBySupplier_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IYnovService/GetNbProductBySupplierResponse" message="tns:IYnovService_GetNbProductBySupplier_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNbSaleByProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IYnovService/GetNbSaleByProduct" message="tns:IYnovService_GetNbSaleByProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IYnovService/GetNbSaleByProductResponse" message="tns:IYnovService_GetNbSaleByProduct_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IYnovService" type="tns:IYnovService">
@@ -156,6 +236,78 @@
     </wsdl:operation>
     <wsdl:operation name="GetAllOrderItem">
       <soap:operation soapAction="http://tempuri.org/IYnovService/GetAllOrderItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNbCustomersByCountry">
+      <soap:operation soapAction="http://tempuri.org/IYnovService/GetNbCustomersByCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNbSupplierByCountry">
+      <soap:operation soapAction="http://tempuri.org/IYnovService/GetNbSupplierByCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNbCommandsByCustomers">
+      <soap:operation soapAction="http://tempuri.org/IYnovService/GetNbCommandsByCustomers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalSpendByCustomers">
+      <soap:operation soapAction="http://tempuri.org/IYnovService/GetTotalSpendByCustomers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalCommandByMonth">
+      <soap:operation soapAction="http://tempuri.org/IYnovService/GetTotalCommandByMonth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTurnoverByMonth">
+      <soap:operation soapAction="http://tempuri.org/IYnovService/GetTurnoverByMonth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNbProductBySupplier">
+      <soap:operation soapAction="http://tempuri.org/IYnovService/GetNbProductBySupplier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNbSaleByProduct">
+      <soap:operation soapAction="http://tempuri.org/IYnovService/GetNbSaleByProduct" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

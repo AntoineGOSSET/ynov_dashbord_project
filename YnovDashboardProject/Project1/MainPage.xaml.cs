@@ -1,6 +1,7 @@
 ﻿using Project1.YnovServiceReference;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -36,6 +37,16 @@ namespace Project1
             this.InitializeComponent();
             YnovServiceClient c = new YnovServiceClient();
             c.GetCustomersAsync();
+
+            ObservableCollection<Nb> test = new ObservableCollection<Nb>();
+
+            test = c.GetNbCommandsByCustomersAsync().Result;
+
+            foreach(var nb in test)
+            {
+                System.Diagnostics.Debug.WriteLine("Test : "+nb.Count.ToString()+" ---- "+nb.FullName);
+            }
+
         }
         
 
@@ -50,6 +61,8 @@ namespace Project1
 
             var pie = (PieSeries)sender;
             pie.ItemsSource = financialStuffList;
+
+           
         }
 
         private void ColumnSeries_Loaded(object sender, RoutedEventArgs e)
@@ -63,6 +76,7 @@ namespace Project1
 
             var column = (ColumnSeries)sender;
             column.ItemsSource = financialStuffList;
+
         }
 
         private void LineSeries_Loaded(object sender, RoutedEventArgs e)
