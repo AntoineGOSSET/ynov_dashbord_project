@@ -9,16 +9,19 @@
     xmlns:Charting="using:WinRTXamlToolkit.Controls.DataVisualization.Charting">
 
     <Hub Background="{StaticResource AppBarBackgroundThemeBrush}" x:Name="test" Header="DashBoard">
-        <HubSection Header="Données Clients" Background="Blue">
+        <HubSection Header="Données Clients" Background="Blue" Width="1000">
             <DataTemplate>
-                <StackPanel>
-                    <Charting:Chart x:Name="NbCustomersByCountry" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,100,0,0" Width="400" Height="400" >
+                <RelativePanel>
+                    <Charting:Chart x:Name="NbCustomersByCountry" HorizontalAlignment="Left" Margin="100,0,0,0" Width="400" Height="400" >
                         <Charting:PieSeries Title="Clients par pays" Margin="0" IndependentValuePath="Name" DependentValuePath="Amount" IsSelectionEnabled="True" Loaded="NbCustomersByCountry_Loaded"/>
                     </Charting:Chart>
-                    <Charting:Chart x:Name="NbCommandsByCustomers" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,100,0,0" Width="600" Height="400">
+                    <Charting:Chart x:Name="NbCommandsByCustomers" HorizontalAlignment="Left" RelativePanel.Below="NbCustomersByCountry" Margin="100,0,0,0" Width="600" Height="400">
                         <Charting:BarSeries Title="Nombres de commandes" Margin="0" IndependentValuePath="Name" DependentValuePath="Amount" IsSelectionEnabled="True" Loaded="NbCommandsByCustomers_Loaded"/>
                     </Charting:Chart>
-                </StackPanel>
+                    <Charting:Chart x:Name="TotalSpendByCustomers" RelativePanel.AlignLeftWith="NbCustomersByCountry"  Margin="500,0,0,0" Width="399" Height="400">
+                        <Charting:ColumnSeries Title="Top dépenses clients" Margin="0" IndependentValuePath="Name" DependentValuePath="Amount" IsSelectionEnabled="True" Loaded="TotalSpendByCustomers_Loaded"/>
+                    </Charting:Chart>
+                </RelativePanel>
             </DataTemplate>
         </HubSection>
         

@@ -76,5 +76,22 @@ namespace Project1
             bar.ItemsSource = financialStuffList;
 
         }
+
+        private void TotalSpendByCustomers_Loaded(object sender, RoutedEventArgs e)
+        {
+            YnovServiceClient c = new YnovServiceClient();
+            ObservableCollection<TotalSpend> TotalSpend = new ObservableCollection<TotalSpend>();
+            TotalSpend = c.GetTotalSpendByCustomersAsync().Result;
+
+            List<FinancialStuff> financialStuffList = new List<FinancialStuff>();
+
+            for (var i = 0; i < 5; i++)
+            {
+                financialStuffList.Add(new FinancialStuff() { Name = TotalSpend[i].FullName, Amount = (int)TotalSpend[i].Amount });
+            }
+
+            var column = (ColumnSeries)sender;
+            column.ItemsSource = financialStuffList;
+        }
     }
 }
