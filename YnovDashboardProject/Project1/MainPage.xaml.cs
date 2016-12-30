@@ -35,87 +35,46 @@ namespace Project1
         public MainPage()
         {
             this.InitializeComponent();
-            YnovServiceClient c = new YnovServiceClient();
-            c.GetCustomersAsync();
-
-            ObservableCollection<Nb> test = new ObservableCollection<Nb>();
-
-            test = c.GetNbCommandsByCustomersAsync().Result;
-
-            foreach(var nb in test)
-            {
-                System.Diagnostics.Debug.WriteLine("Test : "+nb.Count.ToString()+" ---- "+nb.FullName);
-            }
-
         }
         
 
-        private void PieChart_Loaded(object sender, RoutedEventArgs e)
+        private void NbCustomersByCountry_Loaded(object sender, RoutedEventArgs e)
         {
-            Random rand = new Random();
+
+            YnovServiceClient c = new YnovServiceClient();
+            ObservableCollection<CompteurPays> nbCustomers = new ObservableCollection<CompteurPays>();
+            nbCustomers = c.GetNbCustomersByCountryAsync().Result;
+
             List<FinancialStuff> financialStuffList = new List<FinancialStuff>();
-            financialStuffList.Add(new FinancialStuff() { Name = "Windows Phone", Amount = rand.Next(0, 200) });
-            financialStuffList.Add(new FinancialStuff() { Name = "Apple", Amount = rand.Next(0, 200) });
-            financialStuffList.Add(new FinancialStuff() { Name = "Sony", Amount = rand.Next(0, 200) });
-            financialStuffList.Add(new FinancialStuff() { Name = "Samsung", Amount = rand.Next(0, 200) });
+
+            for(var i=0; i<5; i++)
+            {
+                financialStuffList.Add(new FinancialStuff() { Name = nbCustomers[i].Pays, Amount = nbCustomers[i].Nbr });
+            }
 
             var pie = (PieSeries)sender;
             pie.ItemsSource = financialStuffList;
 
-           
         }
+        
 
-        private void ColumnSeries_Loaded(object sender, RoutedEventArgs e)
+        private void NbCommandsByCustomers_Loaded(object sender, RoutedEventArgs e)
         {
-            Random rand = new Random();
+
+            YnovServiceClient c = new YnovServiceClient();
+            ObservableCollection<Nb> NbCommands = new ObservableCollection<Nb>();
+            NbCommands = c.GetNbCommandsByCustomersAsync().Result;
+
             List<FinancialStuff> financialStuffList = new List<FinancialStuff>();
-            financialStuffList.Add(new FinancialStuff() { Name = "Windows Phone", Amount = rand.Next(0, 200) });
-            financialStuffList.Add(new FinancialStuff() { Name = "Apple", Amount = rand.Next(0, 200) });
-            financialStuffList.Add(new FinancialStuff() { Name = "Sony", Amount = rand.Next(0, 200) });
-            financialStuffList.Add(new FinancialStuff() { Name = "Samsung", Amount = rand.Next(0, 200) });
 
-            var column = (ColumnSeries)sender;
-            column.ItemsSource = financialStuffList;
-
-        }
-
-        private void LineSeries_Loaded(object sender, RoutedEventArgs e)
-        {
-            Random rand = new Random();
-            List<FinancialStuff> financialStuffList = new List<FinancialStuff>();
-            financialStuffList.Add(new FinancialStuff() { Name = "Windows Phone", Amount = rand.Next(0, 200) });
-            financialStuffList.Add(new FinancialStuff() { Name = "Apple", Amount = rand.Next(0, 200) });
-            financialStuffList.Add(new FinancialStuff() { Name = "Sony", Amount = rand.Next(0, 200) });
-            financialStuffList.Add(new FinancialStuff() { Name = "Samsung", Amount = rand.Next(0, 200) });
-
-            var line = (LineSeries)sender;
-            line.ItemsSource = financialStuffList;
-        }
-
-        private void BarSeries_Loaded(object sender, RoutedEventArgs e)
-        {
-            Random rand = new Random();
-            List<FinancialStuff> financialStuffList = new List<FinancialStuff>();
-            financialStuffList.Add(new FinancialStuff() { Name = "Windows Phone", Amount = rand.Next(0, 200) });
-            financialStuffList.Add(new FinancialStuff() { Name = "Apple", Amount = rand.Next(0, 200) });
-            financialStuffList.Add(new FinancialStuff() { Name = "Sony", Amount = rand.Next(0, 200) });
-            financialStuffList.Add(new FinancialStuff() { Name = "Samsung", Amount = rand.Next(0, 200) });
+            for (var i = 0; i < 5; i++)
+            {
+                financialStuffList.Add(new FinancialStuff() { Name = NbCommands[i].FullName, Amount = NbCommands[i].Count });
+            }
 
             var bar = (BarSeries)sender;
             bar.ItemsSource = financialStuffList;
-        }
 
-        private void BubbleSeries_Loaded(object sender, RoutedEventArgs e)
-        {
-            Random rand = new Random();
-            List<FinancialStuff> financialStuffList = new List<FinancialStuff>();
-            financialStuffList.Add(new FinancialStuff() { Name = "Windows Phone", Amount = rand.Next(0, 200) });
-            financialStuffList.Add(new FinancialStuff() { Name = "Apple", Amount = rand.Next(0, 200) });
-            financialStuffList.Add(new FinancialStuff() { Name = "Sony", Amount = rand.Next(0, 200) });
-            financialStuffList.Add(new FinancialStuff() { Name = "Samsung", Amount = rand.Next(0, 200) });
-
-            var bubble = (BubbleSeries)sender;
-            bubble.ItemsSource = financialStuffList;
         }
     }
 }
