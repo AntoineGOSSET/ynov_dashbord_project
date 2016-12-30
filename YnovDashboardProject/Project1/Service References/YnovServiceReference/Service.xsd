@@ -13,4 +13,184 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="Ventes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VentesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/UWPExam" minOccurs="0" name="VentesResult" nillable="true" type="q2:ArrayOfVente" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Clients">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClientsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/UWPExam" minOccurs="0" name="ClientsResult" nillable="true" type="q3:ArrayOfClient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Resultats">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResultatsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/UWPExam" minOccurs="0" name="ResultatsResult" nillable="true" type="q4:ArrayOfResultat" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSuppliers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSuppliersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/UWPExam" minOccurs="0" name="GetAllSuppliersResult" nillable="true" type="q5:ArrayOfSupplier" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllProducts">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllProductsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/UWPExam" minOccurs="0" name="GetAllProductsResult" nillable="true" type="q6:ArrayOfProduct" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllOrder">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/UWPExam" minOccurs="0" name="GetAllOrderResult" nillable="true" type="q7:ArrayOfOrder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllOrderItem">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllOrderItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/UWPExam" minOccurs="0" name="GetAllOrderItemResult" nillable="true" type="q8:ArrayOfOrderItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNbCustomersByCountry">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNbCustomersByCountryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/UWPExam" minOccurs="0" name="GetNbCustomersByCountryResult" nillable="true" type="q9:ArrayOfCompteurPays" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNbSupplierByCountry">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNbSupplierByCountryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/UWPExam" minOccurs="0" name="GetNbSupplierByCountryResult" nillable="true" type="q10:ArrayOfCompteurPays" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNbCommandsByCustomers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNbCommandsByCustomersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/UWPExam" minOccurs="0" name="GetNbCommandsByCustomersResult" nillable="true" type="q11:ArrayOfNb" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTotalSpendByCustomers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTotalSpendByCustomersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/UWPExam" minOccurs="0" name="GetTotalSpendByCustomersResult" nillable="true" type="q12:ArrayOfTotalSpend" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTotalCommandByMonth">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTotalCommandByMonthResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/UWPExam" minOccurs="0" name="GetTotalCommandByMonthResult" nillable="true" type="q13:ArrayOfTotalCommand" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTurnoverByMonth">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTurnoverByMonthResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/UWPExam" minOccurs="0" name="GetTurnoverByMonthResult" nillable="true" type="q14:ArrayOfResultat" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNbProductBySupplier">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNbProductBySupplierResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/UWPExam" minOccurs="0" name="GetNbProductBySupplierResult" nillable="true" type="q15:ArrayOfNb" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNbSaleByProduct">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNbSaleByProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/UWPExam" minOccurs="0" name="GetNbSaleByProductResult" nillable="true" type="q16:ArrayOfNbSale" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
